@@ -8,6 +8,8 @@
     "babel-runtime": "^6.18.0",
     "bcrypt": "^2.0.1",
     "clipboard": "^1.7.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-react": "^7.9.1",
     "meteor-node-stubs": "^0.2.11",
     "moment": "^2.22.2",
     "react": "^15.6.2",
