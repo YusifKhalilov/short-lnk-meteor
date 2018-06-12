@@ -15,11 +15,11 @@ export default class Login extends React.Component {
     let email = this.refs.email.value.trim();
     let password = this.refs.password.value.trim();
 
-    Meteor.loginWithPassword({email}, password, (err) => {
+    Meteor.loginWithPassword({ email }, password, (err) => {
       if (err) {
-        this.setState({error: 'Unable to login. Check email and password.'});
+        this.setState({ error: 'Unable to login. Check email and password.' });
       } else {
-        this.setState({error: ''});
+        this.setState({ error: '' });
       }
     });
   }
@@ -32,12 +32,12 @@ export default class Login extends React.Component {
           {this.state.error ? <p>{this.state.error}</p> : undefined}
 
           <form onSubmit={this.onSubmit.bind(this)} noValidate className="boxed-view__form">
-            <input type="email" ref="email" name="email" placeholder="Email"/>
-            <input type="password" ref="password" name="password" placeholder="Password"/>
+            <input type="email" ref="email" name="email" placeholder="Email" />
+            <input type="password" ref="password" name="password" placeholder="Password" />
             <button className="button">Login</button>
           </form>
 
-          <Link to="/signup">Have an account?</Link>
+          <Link to="/signup">Need an account?</Link>
         </div>
       </div>
     );
